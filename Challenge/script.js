@@ -38,9 +38,9 @@ status1Element.style.color=STATUS_MAP[status1Element.innerHTML].color
 
  reserve1.disabled=true
  checkout1.disabled=true
- checkin1.disabled=false
+ checkin1.enabled=true
 
-if(reserve1.disabled , checkout1.disabled){
+if(reserve1.disabled , checkout1.enabled){
     (STATUS_MAP.overdue.canCheckIn)
     
 }else{
@@ -58,7 +58,7 @@ checkin2=document.querySelector('div#book2 button.checkin ');
 
 
 reserve2.disabled=true
-checkout2.disabled=false
+checkout2.enabled=true
 checkin2.disabled=true
 
 if(reserve2.disabled , checkin2.disabled){
@@ -76,11 +76,11 @@ checkout3=document.querySelector('div#book3 button.checkout ');
 checkin3=document.querySelector('div#book3 button.checkin ');
 
 
-reserve3.disabled=true
-checkout3.disabled=true
-checkin3.disabled=false
+reserve3.enabled=true
+checkout3.enabled=true
+checkin3.disabled=true
 
-if(reserve3.disabled , checkout3.disabled){
+if(reserve3.enabled, checkout3.enabled){
    (STATUS_MAP.shelf.canReserve)
 
 }else{
